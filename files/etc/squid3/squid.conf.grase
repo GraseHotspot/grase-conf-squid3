@@ -2328,7 +2328,7 @@ hierarchy_stoplist cgi-bin ?
 #	Default:
 #		access_log /var/log/squid3/access.log squid
 #Default:
-# access_log /var/log/squid3/access.log squid
+access_log /var/log/squid3/access.log squid
 
 #  TAG: icap_log
 #	ICAP log files record ICAP transaction summaries, one line per

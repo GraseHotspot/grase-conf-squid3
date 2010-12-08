@@ -1,3 +1,9 @@
+grase-conf-squid3 (1.0-2) purewhite; urgency=low
+
+  * Logging wasn't working, now enabled
+
+ -- Tim White <tim@hotspot.purewhite.id.au>  Wed, 08 Dec 2010 22:55:19 +1000
+
 grase-conf-squid3 (1.0-1) purewhite; urgency=low
 
   * Remove ipv6 things from squid.conf as it crashes on lucid
