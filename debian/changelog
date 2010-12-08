@@ -1,0 +1,12 @@
+grase-conf-squid3 (1.0-1) purewhite; urgency=low
+
+  * Remove ipv6 things from squid.conf as it crashes on lucid
+
+ -- Tim White <tim@hotspot.purewhite.id.au>  Wed, 08 Dec 2010 22:03:01 +1000
+
+grase-conf-squid3 (1.0) purewhite; urgency=low
+
+  * Initial Release.
+
+ -- Tim White <tim@hotspot.purewhite.id.au>  Wed, 08 Dec 2010 15:00:55 +1000 
+

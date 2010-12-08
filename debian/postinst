@@ -1,0 +1,23 @@
+#!/bin/bash
+
+set -e
+#set -u
+
+action="$1"
+
+if [ "$action" != configure ]
+  then
+  exit 0
+fi
+
+#DEBHELPER#
+
+# Wait for squid to finish restarting
+sleep 2
+
+if which invoke-rc.d >/dev/null 2>&1; then
+       invoke-rc.d squid3 restart || true
+else
+       /etc/init.d/squid3 restart || true
+fi
+
