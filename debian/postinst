@@ -10,6 +10,14 @@ if [ "$action" != configure ]
   exit 0
 fi
 
+move_squid3_logrotate()
+{
+    # FIXME: Not the best way to handle this but no alernatives that aren't messy
+    mv -f /etc/logrotate.d/squid3 /etc/logrotate.d/squid3.disabled || true
+}
+
+move_squid3_logrotate
+
 #DEBHELPER#
 
 # Wait for squid to finish restarting

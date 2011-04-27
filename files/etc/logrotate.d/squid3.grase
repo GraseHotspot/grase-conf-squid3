@@ -1,0 +1,14 @@
+#
+#	Logrotate fragment for squid3. (GRASE Version)
+#
+/var/log/squid3/*.log {
+	weekly
+	nocompress
+	rotate 8
+	missingok
+	nocreate
+	sharedscripts
+	postrotate
+		test ! -e /var/run/squid3.pid || /usr/sbin/squid3 -k rotate
+	endscript
+}

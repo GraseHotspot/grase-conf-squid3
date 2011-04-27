@@ -2,6 +2,14 @@
 
 set -e
 
+fix_squid3_logrotate()
+{
+    # FIXME: Not the best way to handle this but no alernatives that aren't messy
+    mv -f /etc/logrotate.d/squid3.disabled /etc/logrotate.d/squid3 || true
+}
+
+fix_squid3_logrotate
+
 #DEBHELPER#
 
 if which invoke-rc.d >/dev/null 2>&1; then

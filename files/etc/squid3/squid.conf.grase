@@ -653,6 +653,7 @@ acl localnet src 10.0.0.0/8	# RFC1918 possible internal network
 #acl localnet src fe80::/10      # RFC 4291 link-local (directly plugged) machines
 
 acl SSL_ports port 443
+acl SSL_ports port 5222     # XMPP
 acl Safe_ports port 80		# http
 acl Safe_ports port 21		# ftp
 acl Safe_ports port 443		# https
@@ -663,6 +664,7 @@ acl Safe_ports port 280		# http-mgmt
 acl Safe_ports port 488		# gss-http
 acl Safe_ports port 591		# filemaker
 acl Safe_ports port 777		# multiling http
+acl Safe_ports port 5222    # XMPP
 acl CONNECT method CONNECT
 
 #  TAG: follow_x_forwarded_for
