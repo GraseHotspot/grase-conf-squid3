@@ -10,7 +10,7 @@ Package: grase-conf-squid3
 Architecture: all
 Depends: ${misc:Depends}, squid3 (>= 3.1)
 Provides: ${diverted-files}
-Conflicts: ${diverted-files}
+Conflicts: ${diverted-files}, squid (<= 3.1)
 Description: Config files for Squid3 for the GRASE Hotspot System
  The GRASE Hotspot System binds together CoovaChilli, Freeradius, MySQL, and 
  other systems as well as providing an administrative frontend to managing 

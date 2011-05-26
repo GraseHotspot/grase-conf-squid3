@@ -1,3 +1,9 @@
+grase-conf-squid3 (1.1) purewhite; urgency=low
+
+  * Conflict with squid package (so older 2.7 isn't running)
+
+ -- Tim White <tim@hotspot.purewhite.id.au>  Fri, 27 May 2011 09:36:00 +1000
+
 grase-conf-squid3 (1.0-3) purewhite; urgency=low
 
   * Fix logrotate for squid3
