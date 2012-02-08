@@ -5147,6 +5147,7 @@ refresh_pattern .		0	20%	4320
 #	are assumed to be unavailable.
 #Default:
 # dns_timeout 2 minutes
+dns_timeout 20 seconds
 
 #  TAG: dns_defnames	on|off
 #	Normally the RES_DEFNAMES resolver option is disabled
@@ -5168,6 +5169,7 @@ refresh_pattern .		0	20%	4320
 #	Example: dns_nameservers 10.0.0.1 192.172.0.4
 #Default:
 # none
+dns_nameservers 127.0.0.1
 
 #  TAG: hosts_file
 #	Location of the host-local IP name-address associations
