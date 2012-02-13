@@ -1,3 +1,9 @@
+grase-conf-squid3 (1.4) purewhite; urgency=low
+
+  * Include config files in /etc/squid3/grase.d/*.conf to fix bug #58
+
+ -- Tim White <tim@hotspot.purewhite.id.au>  Tue, 14 Feb 2012 06:16:35 +1000
+
 grase-conf-squid3 (1.3) purewhite; urgency=low
 
   * Force squid to use dnsmasq as nameserver as some upstream nameservers cause timeout issues

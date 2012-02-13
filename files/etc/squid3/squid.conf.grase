@@ -5542,3 +5542,4 @@ dns_nameservers 127.0.0.1
 #Default:
 # max_filedescriptors 0
 
+include /etc/squid3/grase.d/*.conf
