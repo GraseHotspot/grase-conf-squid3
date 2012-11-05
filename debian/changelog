@@ -1,8 +1,14 @@
+grase-conf-squid3 (1.5) UNRELEASED; urgency=low
+
+  * Allow log files to compress as it saves space and we can zcat them to read them in www-portal
+
+ -- Tim White <tim@grasehotspot.org>  Mon, 05 Nov 2012 20:36:42 +1000
+
 grase-conf-squid3 (1.4) purewhite; urgency=low
 
   * Include config files in /etc/squid3/grase.d/*.conf to fix bug #58
 
- -- Tim White <tim@hotspot.purewhite.id.au>  Tue, 14 Feb 2012 06:16:35 +1000
+ -- Tim White <tim@hotspot.purewhite.id.au>  Tue, 14 Feb 2012 06:37:28 +1000
 
 grase-conf-squid3 (1.3) purewhite; urgency=low
 

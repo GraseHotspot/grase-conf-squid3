@@ -3,7 +3,8 @@
 #
 /var/log/squid3/*.log {
 	weekly
-	nocompress
+	compress
+	delaycompress
 	rotate 8
 	missingok
 	nocreate
