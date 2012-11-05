@@ -1,4 +1,4 @@
-grase-conf-squid3 (1.5) UNRELEASED; urgency=low
+grase-conf-squid3 (1.5) purewhite; urgency=low
 
   * Allow log files to compress as it saves space and we can zcat them to read them in www-portal
 
