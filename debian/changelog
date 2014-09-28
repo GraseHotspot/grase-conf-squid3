@@ -1,6 +1,7 @@
 grase-conf-squid3 (1.7) UNRELEASED; urgency=medium
 
   * Fix for squid version 3.3
+  * Splitting of package into 3.3 and 3.1 version
 
  -- Tim White <tim@grasehotspot.org>  Sat, 06 Sep 2014 19:50:11 +1000
 
