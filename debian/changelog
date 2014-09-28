@@ -1,3 +1,9 @@
+grase-conf-squid3 (1.5.1) purewhite; urgency=medium
+
+  * Ensure we don't install on newer Squid3
+
+ -- Tim White <tim@grasehotspot.org>  Sun, 28 Sep 2014 11:02:52 +1000
+
 grase-conf-squid3 (1.5) purewhite; urgency=low
 
   * Allow log files to compress as it saves space and we can zcat them to read them in www-portal
