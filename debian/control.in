@@ -6,6 +6,11 @@ Build-Depends-Indep: @cdbs@
 Standards-Version: 3.9.5
 Homepage: http://grasehotspot.org/
 
+Package: grase-conf-squid3
+Architecture: all
+Depends: grase-conf-squid3-3.3 | grase-conf-squid3-3.1
+Description: Virtual package to assist with upgrades
+
 Package: grase-conf-squid3-3.3
 Architecture: all
 Depends: ${misc:Depends}, squid3 (>= 3.3), squid3 (<< 3.4)
