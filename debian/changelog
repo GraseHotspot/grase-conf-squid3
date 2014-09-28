@@ -1,3 +1,9 @@
+grase-conf-squid3 (1.6) purewhite; urgency=medium
+
+  * Bump version number due to nightlies
+
+ -- Tim White <tim@grasehotspot.org>  Sun, 28 Sep 2014 11:31:56 +1000
+
 grase-conf-squid3 (1.5.1) purewhite; urgency=medium
 
   * Ensure we don't install on newer Squid3
