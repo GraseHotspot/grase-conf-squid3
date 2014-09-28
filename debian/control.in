@@ -8,7 +8,7 @@ Homepage: http://grasehotspot.org/
 
 Package: grase-conf-squid3
 Architecture: all
-Depends: ${misc:Depends}, squid3 (>= 3.1)
+Depends: ${misc:Depends}, squid3 (>= 3.1), squid3 (<< 3.2)
 Provides: ${diverted-files}
 Conflicts: ${diverted-files}, squid (<= 3.1)
 Description: Config files for Squid3 for the GRASE Hotspot System
