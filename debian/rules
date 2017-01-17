@@ -54,3 +54,4 @@ else
 	cp ${SQUID_VERSION}_files/etc/squid3/squid.conf.grase debian/grase-conf-squid3/etc/squid3/
 	cp grase.d.README.conf debian/grase-conf-squid3/etc/squid3/grase.d/
 	#ls debian/grase-conf-squid3/etc/squid3/
+endif
