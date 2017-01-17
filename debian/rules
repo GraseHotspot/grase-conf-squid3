@@ -21,3 +21,11 @@ DEB_DIVERT_EXTENSION = .grase
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/config-package.mk
 
+export SQUID_VERSION=3.3
+%:
+  dh $@
+
+
+#override_dh_install:
+#     dh_install --package=libfoo$(FOO_SOVERSION) lib/libfoo.so.$(FOO_SOVERSION) usr/lib/$(DEB_HOST_MULTIARCH)
+#     dh_install

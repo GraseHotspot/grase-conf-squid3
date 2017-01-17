@@ -1,6 +1,0 @@
-#!/bin/sh
-
-# This overrides the default squid3 config with the config for the GRASE Hotspot
-CONFIG=/etc/squid3/squid.conf.grase
-SQUID_ARGS="-YC -f $CONFIG"
-

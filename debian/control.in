@@ -6,28 +6,13 @@ Build-Depends-Indep: @cdbs@
 Standards-Version: 3.9.5
 Homepage: http://grasehotspot.org/
 
-Package: grase-conf-squid3-3.3
+Package: grase-conf-squid3
 Architecture: all
-Depends: ${misc:Depends}, squid3 (>= 3.3), squid3 (<< 3.5)
-Provides: grase-conf-squid3
-Replaces: grase-conf-squid3
-Conflicts: squid (<= 3.1), grase-conf-squid3-3.1, grase-conf-squid3
+Depends: ${misc:Depends}, ${dist:Depends}, squid3 (>= 3.3), squid3 (<< 3.5)
+Conflicts: grase-conf-squid3-3.1, grase-conf-squid3-3.3
 Description: Config files for Squid3 for the GRASE Hotspot System
- The GRASE Hotspot System binds together CoovaChilli, Freeradius, MySQL, and 
- other systems as well as providing an administrative frontend to managing 
+ The GRASE Hotspot System binds together CoovaChilli, Freeradius, MySQL, and
+ other systems as well as providing an administrative frontend to managing
  users and other hotspot related tasks.
  .
- This package provides Configuration files for the Squid3 (3.3) subsystem
-
-Package: grase-conf-squid3-3.1
-Architecture: all
-Depends: ${misc:Depends}, squid3 (>= 3.1), squid3 (<< 3.2)
-Provides: grase-conf-squid3
-Replaces: grase-conf-squid3
-Conflicts: squid (<= 3.1), grase-conf-squid3-3.3, grase-conf-squid3
-Description: Config files for Squid3 for the GRASE Hotspot System
- The GRASE Hotspot System binds together CoovaChilli, Freeradius, MySQL, and 
- other systems as well as providing an administrative frontend to managing 
- users and other hotspot related tasks.
- .
- This package provides Configuration files for the Squid3 (3.1) subsystem
+ This package provides Configuration files for the Squid3 subsystem
