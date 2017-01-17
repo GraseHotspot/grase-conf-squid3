@@ -1,0 +1,48 @@
+.build_template: &build_definition
+  stage: build
+  script:
+    - dch -v $(git describe |tr '-' '.')~$(lsb_release -cs) -b ""
+    - dpkg-buildpackage
+    - mkdir artifacts
+    - mv -v ../grase-conf-squid3_* artifacts/
+  artifacts:
+    paths:
+      - artifacts/
+    expire_in: 1 week
+
+.test_template: &test_definition
+  stage: test
+  script:
+    - apt-get update && apt-get install -y gdebi
+    - gdebi -n artifacts/*.deb
+
+
+jessie-all:
+  <<: *build_definition
+  image: grase/build-images:jessie
+
+trusty-all:
+  <<: *build_definition
+  image: grase/build-images:trusty
+
+xenial-all:
+  <<: *build_definition
+  image: grase/build-images:xenial
+
+test:jessie-all:
+  <<: *test_definition
+  image: debian:jessie
+  dependencies:
+    - jessie-all
+
+test:trusty-all:
+  <<: *test_definition
+  image: ubuntu:trusty
+  dependencies:
+    - trusty-all
+
+test:xenial-all:
+  <<: *test_definition
+  image: ubuntu:xenial
+  dependencies:
+    - xenial-all
