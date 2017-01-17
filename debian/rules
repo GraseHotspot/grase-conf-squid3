@@ -19,13 +19,24 @@ DEB_DIVERT_EXTENSION = .grase
 # (see debian/grase-conf-monit.install)
 
 include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/config-package.mk
+#include /usr/share/cdbs/1/rules/config-package.mk
 
-export SQUID_VERSION=3.3
-%:
-  dh $@
+ifeq ($(lsb_release -cs),xenial)
+	DEB_DH_GENCONTROL_ARGS_ALL = -- -Vdist:Depends="squid (>= 3.5)"
+	export SQUID_VERSION=3.5
+else
+	DEB_DH_GENCONTROL_ARGS_ALL = -- -Vdist:Depends="squid3 (>= 3.3), squid3 (<< 3.5)"
+	export SQUID_VERSION=3.1
+endif
 
 
-#override_dh_install:
+#%:
+#	dh $@
+
+
+install/grase-conf-squid3::
 #     dh_install --package=libfoo$(FOO_SOVERSION) lib/libfoo.so.$(FOO_SOVERSION) usr/lib/$(DEB_HOST_MULTIARCH)
-#     dh_install
+	#dh_install
+	mkdir -p debian/grase-conf-squid3/etc/squid3/dpkg
+	cp ${SQUID_VERSION}_files/etc/squid3/squid.conf.grase debian/grase-conf-squid3/etc/squid3/
+	#ls debian/grase-conf-squid3/etc/squid3/

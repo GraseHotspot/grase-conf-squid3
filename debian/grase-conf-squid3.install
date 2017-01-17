@@ -1,3 +1,1 @@
-#!/usr/bin/dh_subst
 default_files/* /
-${SQUID_VERSION}_files/* /
