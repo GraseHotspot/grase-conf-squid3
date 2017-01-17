@@ -45,6 +45,12 @@ endif
 install/grase-conf-squid3::
 #     dh_install --package=libfoo$(FOO_SOVERSION) lib/libfoo.so.$(FOO_SOVERSION) usr/lib/$(DEB_HOST_MULTIARCH)
 	#dh_install
-	mkdir -p debian/grase-conf-squid3/etc/squid3/dpkg
+ifeq (${SQUID_VERSION},3.5)
+	mkdir -p debian/grase-conf-squid3/etc/squid/grase.d/
+	cp ${SQUID_VERSION}_files/etc/squid/squid.conf.grase debian/grase-conf-squid3/etc/squid/
+	cp grase.d.README.conf debian/grase-conf-squid3/etc/squid/grase.d/
+else
+	mkdir -p debian/grase-conf-squid3/etc/squid3/grase.d/
 	cp ${SQUID_VERSION}_files/etc/squid3/squid.conf.grase debian/grase-conf-squid3/etc/squid3/
+	cp grase.d.README.conf debian/grase-conf-squid3/etc/squid3/grase.d/
 	#ls debian/grase-conf-squid3/etc/squid3/
